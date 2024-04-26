@@ -2,6 +2,16 @@
 
 * NONE
 
+## Table of contents
+
+* [Description](#Description)
+* [Getting Started](#getting-started)
+* [Installing](#installing)
+* [Executing program](#executing-program)
+* [Help](#help)
+* [Authors](#authors)
+
+
 ## Description
 
 * NONE
