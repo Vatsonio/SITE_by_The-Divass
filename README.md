@@ -59,5 +59,5 @@ ex. [@bushchakkkkkky](https://t.me/bushchakk)
 
 ## License
 
-This project is licensed under the [NONE] License - see the LICENSE.md file for details
+This project is licensed under the  License[License] - see the LICENSE.md file for details
 
