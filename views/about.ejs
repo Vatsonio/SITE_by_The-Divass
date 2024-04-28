@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <!--         CREATED BY VATSONIO          -->
+
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Divass AboutUs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<audio id="sound1" src="sounds/New Gat Red.wav" preload="auto" ></audio>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="css/superfish.css">
+	<!-- Main Style -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Like button Style -->
+	<link rel="stylesheet" href="css/Like button.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		<div id="vatsonio-wrapper">
+			<div id="vatsonio-page">
+				<div id="vatsonio-header">
+					<header id="vatsonio-header-section">
+						<div class="container">
+							<div class="nav-header">
+								<a href="#" class="js-vatsonio-nav-toggl9e vatsonio-nav-toggle"><i></i></a>
+								<h1 id="vatsonio-logo"><a href="/">
+									The Divass
+								</a>
+								<!-- START #vatsonio-menu-wrap -->
+								<nav id="vatsonio-menu-wrap" role="navigation">
+									<ul class="sf-menu" id="vatsonio-primary-menu">
+										<li class="active">
+											<a href="/">Домашня сторінка</a>
+										</li>
+										<% if (!user) { %>
+											<li>
+												<a href="/login">Вхід</a>
+											</li>
+											<li>
+												<a href="/register">Реєстрація</a>
+											</li>
+										<% } else { %>
+											<li>
+												<a href="/profile"><%= user.username %></a>
+											</li>
+											<!-- <% if (user.role == 'Волонтер') { %>
+												<li>
+													<a href="/volunteer-dashboard">Панель волонтера</a>
+												</li>
+											<% } else { %>
+												<li>
+													<a href="/user-dashboard">Панель користувача</a>
+												</li>
+											<% } %> -->
+										<% } %>
+										<li><a href="/contact">Контактна форма</a></li>
+										<li><a style="color: #4CB648;" href="/about">Про Нас</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</header>		
+				</div>
+		<!-- end:vatsonio-header -->
+		<div class="vatsonio-parallax" style="background-image: url(images/home-blur-5.png);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center vatsonio-table">
+						<div class="vatsonio-intro vatsonio-table-cell animate-box">
+							<h1 class="text-center" style="font-family: 'brand';"><b>Про нас</b></h1>
+							<p><span>Created with <i class="icon-heart3"></i> by <a href="https://twitter.com/vatsonio" class="vatsonio-site-name" onclick="document.getElementById('sound1').play();">Divass</a></span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- end: vatsonio-parallax -->
+		<!-- end:vatsonio-hero -->
+		<div id="vatsonio-team-section" style="padding: 7em 0 0 0;">
+			<div class="container">
+				<div class="row about">
+					<div class="col-md-12 col-md-offset-0 animate-box">
+						<h2>TheDivass - команда розробників </h2>
+						<b>
+							<a href="https://t.me/vatsonio">@Vatsonio ----</a> 
+							<a href="https://t.me/IllaIlev">@AdamSmasherr ----</a> 
+							<a href="https://t.me/andriy_chornobai">@Dronchik09 ----</a> 
+							<a href="https://t.me/W1nSoU">@W1nSoU ----</a> 
+							<a href="https://t.me/bushchakk">@bushchakkkkkky  </a> 
+						</b>
+						<p></p>
+						<p>Цей веб-сайт є чудовим ресурсом, який надає волонтерам можливість допомагати людям. Він створений за допомогою різних технологій, що забезпечують його гнучкість, надійність та інтуїтивно зрозумілий інтерфейс. </p>
+						<h2>Сайт використовує такі бібліотеки як:</h2>
+						<blockquote>
+
+			
+							<!-- Бекенд бібліотеки -->
+							<p>Бекенд бібліотеки</p>
+							<p><a href="https://nodejs.org/">-- Node.js --</a></p>
+							<p><a href="https://www.mongodb.com/cloud/atlas">-- MongoDB (Atlas) --</a></p>
+							<p><a href="https://expressjs.com/">-- Express --</a></p>
+							<p><a href="https://www.npmjs.com/package/body-parser">-- Body-parser --</a></p>
+							<p><a href="https://www.npmjs.com/package/express-session">-- Express-session --</a></p>
+							<p><a href="https://mongoosejs.com/">-- Mongoose --</a></p>
+
+							<!-- Фронтенд бібліотеки -->
+							<p>Фронтенд бібліотеки</p>
+							<p><a href="https://jquery.com/">-- jQuery --</a></p>
+							<p><a href="https://jqueryui.com/easing/">-- jQuery Easing --</a></p>
+							<p><a href="https://plugins.jquery.com/stellar/">-- jQuery Stellar --</a></p>
+							<p><a href="https://getbootstrap.com/">-- Bootstrap --</a></p>
+							<p><a href="https://animate.style/">-- animate --</a></p>
+							<p><a href="https://modernizr.com/">-- Modernizr --</a></p>
+
+						</blockquote>
+						<p>Ps: "Vatsonio" - maincharter</p>
+						
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="heading-section text-center animate-box">
+							<h2>Git Hub</h2>
+							<p>Ось репозиторій на <a href="https://github.com/Vatsonio/SITE_by_The-Divass/">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-12 col-md-offset-0">
+					<div class="heading-section text-center animate-box">
+						<h2>Загальний вигляд проєкту</h2>
+						<p>Загалом у файлах виконується <b>25 338</b> рядків коду</p>
+					</div>
+					<div style="display: flex; justify-content: center;">
+						<img class="img-responsive animate-box" src="images/stata.png" alt="About">
+					</div>
+					<img class="img-responsive animate-box" src="images/about code.png" alt="About">
+				</div>
+			</div>
+			<div class="row" style="padding: 0 0 4em 0;">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="heading-section text-center animate-box">
+						<h2 style="font-size: 50px;">Дякуємо за увагу!</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- GO TO TOP  --> 
+		<a onclick="document.getElementById('sound1').play();"   href="#" id="back-to-top" title="Піднятись на гору" class="">&uarr;</a> 
+		<!-- GO TO TOP End --> 
+	</div>
+	<footer>
+		<div id="footer" style="padding: 2em 0 0 0">
+			<div class="container">
+				<div class="col-md-6 col-md-offset-3 text-center">
+					<!-- <p><a href="#" title="Вподобайка" class="vatsonioBtn vatsonioBtn-counter multiple-count" data-count="0"><span>&#x2764;</span> Like it</a></p> -->
+					<p><a href="#" title="Вподобайка" class="vatsonioBtn vatsonioBtn-counter" data-count="0" onclick="document.getElementById('sound1').play();"><span>&#x2764;</span> Like it</a></p>
+					<p class="vatsonio-social-icons">
+						<a href="#" onclick="document.getElementById('sound1').play();"><i class="icon-twitter2"></i></a>
+						<a href="#" onclick="document.getElementById('sound1').play();"><i class="icon-facebook2"></i></a>
+						<a href="#" onclick="document.getElementById('sound1').play();"><i class="icon-instagram"></i></a>
+						<a href="#" onclick="document.getElementById('sound1').play();"><i class="icon-youtube"></i></a>
+					</p>
+					<p>© 2024 Divass. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- END vatsonio-page -->
+    </div>
+	<!-- END vatsonio-wrapper -->
+
+	<!-- jQuery -->
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Superfish -->
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

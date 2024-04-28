@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <!--         CREATED BY VATSONIO          -->
+
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Divass AboutUs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<audio id="sound1" src="sounds/New Gat Red.wav" preload="auto" ></audio>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="css/superfish.css">
+	<!-- Main Style -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Like button Style -->
+	<link rel="stylesheet" href="css/Like button.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		<div id="vatsonio-wrapper">
+			<div id="vatsonio-page">
+			<div id="vatsonio-header">
+				<header id="vatsonio-header-section">
+					<div class="container">
+						<div class="nav-header">
+							<a href="#" class="js-vatsonio-nav-toggl9e vatsonio-nav-toggle"><i></i></a>
+							<h1 id="vatsonio-logo"><a href="/">
+								The Divass
+							</a>
+							<!-- START #vatsonio-menu-wrap -->
+							<nav id="vatsonio-menu-wrap" role="navigation">
+								<ul class="sf-menu" id="vatsonio-primary-menu">
+									<li class="active">
+										<a href="/">Домашня сторінка</a>
+									</li>
+									<li>
+										<a style="color: #4CB648;" href="/profile"><%= user.username %></a>
+									</li>
+										
+									<li><a href="/contact">Контактна форма</a></li>
+									<li><a href="/about">Про Нас</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</header>		
+			</div>
+		<!-- end:vatsonio-header -->
+		<div class="vatsonio-parallax" style="background-image: url(images/home-blur-5.png);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center vatsonio-table">
+						<div class="vatsonio-intro vatsonio-table-cell animate-box">
+							<h1 class="text-center" style="font-family: 'brand';"><b>Request Help</b></h1>
+							<p><span>Created with <i class="icon-heart3"></i> by <a href="https://twitter.com/vatsonio" class="vatsonio-site-name" onclick="document.getElementById('sound1').play();">Divass</a></span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- end: vatsonio-parallax -->
+		<!-- end:vatsonio-hero -->
+		<div id="vatsonio-team-section" style="padding: 3em 0 0 0;">
+			<div class="container" style="padding: 0 0 4em 0;">
+				<div class="col-md-6 col-md-offset-3">
+					<h2 class="text-center">Заповніть форму</h2>
+					<form id="form1" method="post" action="/submit-request">
+						<div class="form-group">
+							<label for="title">Заголовок:</label>
+							<input type="text" id="title" name="title" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="location">Місцезнаходження:</label>
+							<input type="text" id="location" name="location" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="tg">Ваш телеграм для зв'язку:</label>
+							<input type="text" id="tg" name="tg" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="description">Опис:</label>
+							<textarea id="description" name="description" class="form-control"></textarea>
+						</div>
+						<div class="form-group text-center">
+							<input type="submit" value="Submit Request" class="btn btn-success">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- GO TO TOP  --> 
+		<a onclick="document.getElementById('sound1').play();"   href="#" id="back-to-top" title="Піднятись на гору" class="">&uarr;</a> 
+		<!-- GO TO TOP End --> 
+	</div>
+	<footer>
+		<div id="footer" style="padding: 2em 0 0 0">
+			<div class="container">
+				<div class="col-md-6 col-md-offset-3 text-center">
+					<!-- <p><a href="#" title="Вподобайка" class="vatsonioBtn vatsonioBtn-counter multiple-count" data-count="0"><span>&#x2764;</span> Like it</a></p> -->
+					<p><a href="#" title="Вподобайка" class="vatsonioBtn vatsonioBtn-counter" data-count="0" onclick="document.getElementById('sound1').play();"><span>&#x2764;</span> Like it</a></p>
+					<p class="vatsonio-social-icons">
+						<a href="#" onclick="document.getElementById('sound1').play();"><i class="icon-twitter2"></i></a>
+						<a href="#" onclick="document.getElementById('sound1').play();"><i class="icon-facebook2"></i></a>
+						<a href="#" onclick="document.getElementById('sound1').play();"><i class="icon-instagram"></i></a>
+						<a href="#" onclick="document.getElementById('sound1').play();"><i class="icon-youtube"></i></a>
+					</p>
+					<p>© 2024 Divass. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- END vatsonio-page -->
+    </div>
+	<!-- END vatsonio-wrapper -->
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$( "#form1" ).submit(function(event) {
+				event.preventDefault();
+				$.ajax({
+					type: 'POST',
+					url: '/',
+					data: $('#form1').serialize(),
+					dataType: "json",
+					success: function(response){
+						$('#form1')[0].reset();
+						document.getElementById("check").innerHTML=response.Success;
+         				setTimeout(function(){
+         					document.getElementById("check").innerHTML="";
+         				},3000);
+         				if (response.Success=="You are regestered,You can login now.") {
+         					document.getElementById("aa").click();
+         				};
+         			},
+         			error: function() {
+         				console.log("Error");
+         			}
+         		})
+			});
+		});
+	</script>
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Superfish -->
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,50 @@
+  .vatsonioBtn {
+    box-shadow: 1px 1px 0 rgba(255,255,255,0.5) inset;
+    border-radius: 3px;
+    border: 1px solid;
+    display: inline-block;
+    height: 20px;
+    line-height: 18px;
+    padding: 0 8px;
+    position: relative;
+  
+    font-size: 12px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  }
+
+  .vatsonioBtn-counter { margin-right: 39px; }
+  .vatsonioBtn-counter:after,
+  .vatsonioBtn-counter:hover:after { text-shadow: none; }
+  .vatsonioBtn-counter:after {
+    border-radius: 3px;
+    border: 1px solid #eee;
+    padding: 0 8px;
+    color: #eee;
+    content: attr(data-count);
+    left: 100%;
+    margin-left: 8px;
+    margin-right: -13px;
+    position: absolute;
+    top: -1px;
+  }
+  
+  .vatsonioBtn {
+    color: white;
+  }
+  .vatsonioBtn:hover {
+    
+  }
+  .vatsonioBtn.active {
+    text-shadow: 0 1px 0 #dbdbdb;
+    background-color: #dbdbdb;
+    border-color: #dbdbdb;
+  }
+  .vatsonioBtn:active { box-shadow: 0 0 5px 3px rgba(0,0,0,0.2) inset; }
+  .vatsonioBtn span { color: #eeeeee}
+  .vatsonioBtn:hover, .vatsonioBtn:hover span,
+  .vatsonioBtn.active, .vatsonioBtn.active span { color: #4CB648; }
+  .vatsonioBtn:active span {
+    color: #dbdbdb;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+  }
