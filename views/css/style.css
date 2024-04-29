@@ -30,7 +30,9 @@ body {
   color: #848484;
   font-weight: 300;
   overflow-x: hidden;
+
 }
+
 body.vatsonio-offcanvas {
   overflow: hidden;
 }
@@ -112,9 +114,9 @@ figure {
   background: rgba(0, 0, 0, 0.7);
 }
 
-.vatsonio-area {
+/* .vatsonio-area {
 
-}
+} */
 
 .button-like {
   border: 2px solid #8a8a8a;
@@ -204,7 +206,7 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .vatsonio-cover {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -221,7 +223,7 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .vatsonio-cover.vatsonio-cover_2 {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -287,7 +289,7 @@ figure {
   box-shadow: none;
   border: transparent;
   min-width: 12em;
-  *width: 12em;
+  width: 12em;
 }
 
 .sf-menu a {
@@ -345,7 +347,7 @@ figure {
 
 .sf-arrows .sf-with-ul {
   padding-right: 2.5em;
-  *padding-right: 1em;
+  padding-right: 1em;
 }
 
 .sf-arrows .sf-with-ul:after {
@@ -469,7 +471,6 @@ color:#fff;
 #vatsonio-primary-menu > li > .sf-with-ul:after {
   border: none !important;
   font-family: 'icomoon';
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -492,7 +493,6 @@ color:#fff;
 #vatsonio-primary-menu > li > ul li > .sf-with-ul:after {
   border: none !important;
   font-family: 'icomoon';
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -664,7 +664,7 @@ color:#fff;
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   font-size: 16px;
 }
 .schedule li a {
@@ -688,7 +688,7 @@ color:#fff;
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    display: inline;
     margin-bottom: 10px;
     font-size: 18px;
   }
@@ -1127,8 +1127,8 @@ table.table { width: 100%; }
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline;
-    float: left;
+    display: inline;
+    /* float: left; */
     margin-right: 10px;
     margin-top: 8px;
   }
@@ -1375,7 +1375,7 @@ table.table { width: 100%; }
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   width: 30px;
   height: 2px;
   color: #fff;

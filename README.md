@@ -88,6 +88,16 @@ node server.js
 The server will start Running on
 + http://localhost:3000/
 
+## Help
+
+If you are unable to install the libraries at the first attempt, try deleting the “node_modules” folder and the “package-lock.json” file.
+
+After that, enter the command:
+```
+npm install
+
+npm i
+```
 
 ## Authors
 
@@ -98,6 +108,10 @@ ex. [@W1nSoU](https://t.me/W1nSoU)
 ex. [@bushchakkkkkky](https://t.me/bushchakk)
 
 ## Version History
+* 0.4
+    * fix bugs
+    * Edited ForgetPass page
+    * Readme.md edited
 * 0.3
     * Added good code
     * Readme.md edited

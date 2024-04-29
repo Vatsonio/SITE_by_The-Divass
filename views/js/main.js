@@ -3,6 +3,10 @@
 
 ;(function () {
 
+	window.onload = function() {
+		document.getElementById('blur-effect').classList.add('loaded');
+	};
+
 	/* ==================================================================
                                     Go to Top
        ================================================================== */

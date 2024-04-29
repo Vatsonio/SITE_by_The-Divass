@@ -15,31 +15,29 @@ router.get('/', function (req, res) {
 	User.findOne({unique_id:req.session.userId},function(err,user){
 		if(err){
 			console.error(err);
-			user = null; // Встановити користувача як null, якщо виникла помилка
+			user = null;
 		}
 		Requests.find({}, function(err, requests) {
 			if (err) {
 				return handleError(res, err, "Помилка при отриманні заявок.");
 			}
-			// Рендер сторінки з даними користувача (якщо він залогінений) та заявками
 			res.render('index', { user: user, requests: requests });
 		});
 	});
 });
 
 
-
+// Завантаження Сторінки Реєстрація
 router.get('/register', function (req, res, next) {
 	User.findOne({unique_id:req.session.userId},function(err,user){
 		if(err){
 			console.error(err);
-			user = null; // Встановити користувача як null, якщо виникла помилка
+			user = null;
 		}
 		Requests.find({}, function(err, requests) {
 			if (err) {
 				return handleError(res, err, "Помилка при отриманні заявок.");
 			}
-			// Рендер сторінки з даними користувача (якщо він залогінений) та заявками
 			res.render('register.ejs', { user: user, requests: requests });
 		});
 	});
@@ -98,13 +96,12 @@ router.get('/login', function (req, res) {
 	User.findOne({unique_id:req.session.userId},function(err,user){
 		if(err){
 			console.error(err);
-			user = null; // Встановити користувача як null, якщо виникла помилка
+			user = null;
 		}
 		Requests.find({}, function(err, requests) {
 			if (err) {
 				return handleError(res, err, "Помилка при отриманні заявок.");
 			}
-			// Рендер сторінки з даними користувача (якщо він залогінений) та заявками
 			res.render('login.ejs', { user: user, requests: requests });
 		});
 	});
@@ -142,7 +139,6 @@ router.post('/submit-request', function(req, res) {
 		if (err) {
 			return handleError(res, err, "Помилка при створенні заявки.");
 		}
-		// Перенаправлення користувача на головну сторінку
 		res.redirect('/');
 	});
 });
@@ -158,18 +154,17 @@ router.get('/requests', function(req, res) {
 	});
 });
 
-
+// Завантаження Сторінки з створенням заявки
 router.get('/request-help', function (req, res, next) {
 	User.findOne({unique_id:req.session.userId},function(err,user){
 		if(err){
 			console.error(err);
-			user = null; // Встановити користувача як null, якщо виникла помилка
+			user = null;
 		}
 		Requests.find({}, function(err, requests) {
 			if (err) {
 				return handleError(res, err, "Помилка при отриманні заявок.");
 			}
-			// Рендер сторінки з даними користувача (якщо він залогінений) та заявками
 			res.render('request-help.ejs', { user: user});
 		});
 	});
@@ -177,34 +172,33 @@ router.get('/request-help', function (req, res, next) {
 
 
 
-
+// Завантаження Сторінки з контактною формою
 router.get('/contact', function (req, res, next) {
 	User.findOne({unique_id:req.session.userId},function(err,user){
 		if(err){
 			console.error(err);
-			user = null; // Встановити користувача як null, якщо виникла помилка
+			user = null;
 		}
 		Requests.find({}, function(err, requests) {
 			if (err) {
 				return handleError(res, err, "Помилка при отриманні заявок.");
 			}
-			// Рендер сторінки з даними користувача (якщо він залогінений) та заявками
 			res.render('contact.ejs', { user: user, requests: requests });
 		});
 	});
 });
 
+// Завантаження Сторінки з інформацією про сайт
 router.get('/about', function (req, res, next) {
 	User.findOne({unique_id:req.session.userId},function(err,user){
 		if(err){
 			console.error(err);
-			user = null; // Встановити користувача як null, якщо виникла помилка
+			user = null; 
 		}
 		Requests.find({}, function(err, requests) {
 			if (err) {
 				return handleError(res, err, "Помилка при отриманні заявок.");
 			}
-			// Рендер сторінки з даними користувача (якщо він залогінений) та заявками
 			res.render('about.ejs', { user: user, requests: requests });
 		});
 	});
@@ -280,8 +274,21 @@ router.get('/logout', function (req, res, next) {
 }
 });
 
+// Завантаження Сторінки "Forgen Pass"
 router.get('/forgetpass', function (req, res, next) {
-	res.render("forget.ejs");
+	User.findOne({unique_id:req.session.userId},function(err,user){
+		if(err){
+			console.error(err);
+			user = null;
+		}
+		Requests.find({}, function(err, requests) {
+			if (err) {
+				return handleError(res, err, "Помилка при отриманні заявок.");
+			}
+		
+			res.render('forget.ejs', { user: user, requests: requests });
+		});
+	});
 });
 
 router.post('/forgetpass', function (req, res, next) {
