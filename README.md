@@ -5,17 +5,15 @@
 
 
 <p align="center">
-  <a href="/LICENSE"><img src="https://img.shields.io/github/license/guruhariharaun/Registration-and-Login-Form-in-Nodejs-and-MongoDB.svg?style=flat-square"></a>
+  <a href="/License"><img src="https://img.shields.io/github/license/guruhariharaun/Registration-and-Login-Form-in-Nodejs-and-MongoDB.svg?style=flat-square"></a>
 </p>
 
 
 ## Table of contents
 
-* [Description](#Description)
+* [Description](#description)
 * [Getting Started](#getting-started)
-* [Installing](#installing)
-* [Executing program](#executing-program)
-* [Help](#help)
+* [Installation](#install)
 * [Authors](#authors)
 
 
@@ -31,31 +29,31 @@ This Project is **[Live]()** on: ****
 ### •Registration Form:
 Allows the user to register their account by filling their Email, Username, Password, telegram(for contact), role.
 
-<img src="./preview/register-preview.PNG" style="border: 1px solid black;">
+<img src="./preview/register-preview.png/" style="border: 1px solid black;">
 
 ### •Login Form:
 If the user has been registered on the app, where you can login.
 
-<img src="./preview/login-preview.PNG" style="border: 1px solid black;">
+<img src="./preview/login-preview.png/" style="border: 1px solid black;">
 
 ### •User's Profile:
 After the user logged in, a simple profile with the user's username password and role<br>displayed with a session Logout button.
 
-<img src="./preview/Profile-preview.PNG" style="border: 1px solid black;">
+<img src="/preview/Profile-preview.png/" style="border: 1px solid black;">
 
 ### DataBase:
 MongoDB **[MongoDB Atlas(Cloud)](https://www.mongodb.com/cloud/atlas)** serves as our database. Two collections reside within this database:
 - "users"
 - "sessions"
 
-**## Prerequisites**
+## Prerequisites
 Tools required to successfully execute this application:
 
 - ***Node.js: [https://nodejs.org/en/](https://nodejs.org/en/)***
 - ***Node Package Manager: [https://www.npmjs.com/get-npm](https://www.npmjs.com/get-npm)***
 - ***MongoDB (Atlas): [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)***
 
-**## Installation**
+# Install 
 ```
 npm install
 ```
@@ -80,13 +78,6 @@ The server will start Running on
 + http://localhost:3000/
 
 
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
 ## Authors
 
 ex. [@Vatsonio](https://t.me/vatsonio)
@@ -96,7 +87,9 @@ ex. [@W1nSoU](https://t.me/W1nSoU)
 ex. [@bushchakkkkkky](https://t.me/bushchakk)
 
 ## Version History
-
+* 0.3
+    * Added good code
+    * Readme.md edited
 * 0.2
     * Added Start code
     * See [commit change]() or See [release history]()
