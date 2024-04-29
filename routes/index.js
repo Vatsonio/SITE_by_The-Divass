@@ -12,7 +12,7 @@ function handleError(res, err, message) {
 
 // Головна сторінка
 router.get('/', function (req, res) {
-	User.findOne({unique_id:req.session.userId},function(err,user){а
+	User.findOne({unique_id:req.session.userId},function(err,user){
 		if(err){
 			console.error(err);
 			user = null; // Встановити користувача як null, якщо виникла помилка
@@ -281,19 +281,7 @@ router.get('/logout', function (req, res, next) {
 });
 
 router.get('/forgetpass', function (req, res, next) {
-	User.findOne({unique_id:req.session.userId},function(err,user){
-		if(err){
-			console.error(err);
-			user = null; // Встановити користувача як null, якщо виникла помилка
-		}
-		Requests.find({}, function(err, requests) {
-			if (err) {
-				return handleError(res, err, "Помилка при отриманні заявок.");
-			}
-			// Рендер сторінки з даними користувача (якщо він залогінений) та заявками
-			res.render('forget.ejs', { user: user, requests: requests });
-		});
-	});
+	res.render("forget.ejs");
 });
 
 router.post('/forgetpass', function (req, res, next) {
