@@ -59,9 +59,10 @@ After the user logged in, a simple profile with the user's username password and
 <img src="./preview/about-preview.png/" style="border: 1px solid black;">
 
 ### DataBase:
-MongoDB **[MongoDB Atlas(Cloud)](https://www.mongodb.com/cloud/atlas)** serves as our database. Two collections reside within this database:
-- "users"
+MongoDB **[MongoDB Atlas(Cloud)](https://www.mongodb.com/cloud/atlas)** serves as our database. Three collections reside within this database:
 - "sessions"
+- "users"
+- "volonteerhelps"
 
 ## Prerequisites
 Tools required to successfully execute this application:
