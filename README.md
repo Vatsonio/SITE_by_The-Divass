@@ -26,6 +26,10 @@ This Project is **[Live]()** on: ****
 
 ## Getting Started
 
+### •Main Form:
+
+<img src="./preview/index-preview.png/" style="border: 1px solid black;">
+
 ### •Registration Form:
 Allows the user to register their account by filling their Email, Username, Password, telegram(for contact), role.
 
@@ -40,6 +44,19 @@ If the user has been registered on the app, where you can login.
 After the user logged in, a simple profile with the user's username password and role<br>displayed with a session Logout button.
 
 <img src="/preview/Profile-preview.png/" style="border: 1px solid black;">
+
+### •Request-help Form:
+
+<img src="./preview/request-help-preview.png/" style="border: 1px solid black;">
+
+
+### •Contact Form:
+
+<img src="./preview/contact-preview.png/" style="border: 1px solid black;">
+
+### •About Form:
+
+<img src="./preview/about-preview.png/" style="border: 1px solid black;">
 
 ### DataBase:
 MongoDB **[MongoDB Atlas(Cloud)](https://www.mongodb.com/cloud/atlas)** serves as our database. Two collections reside within this database:
