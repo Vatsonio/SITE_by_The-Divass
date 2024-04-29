@@ -85,12 +85,6 @@ Modify line 12 within `./server.js`:
 node server.js
 ```
 
-**Key Changes:**
-
-* **Clarity:** More direct language in the prerequisites descriptions.
-* **Consistency:** Consistent use of "MongoDB Atlas" for branding.
-* **Conciseness:** Removed unnecessary words while maintaining the meaning.
-
 The server will start Running on
 + http://localhost:3000/
 
