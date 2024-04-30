@@ -109,6 +109,10 @@ ex. [@W1nSoU](https://t.me/W1nSoU)
 ex. [@bushchakkkkkky](https://t.me/bushchakk)
 
 ## Version History
+* 0.5
+    * fix bugs
+    * Add Hash pass using 'bcrypt'
+    * Readme.md edited
 * 0.4
     * fix bugs
     * Edited ForgetPass page

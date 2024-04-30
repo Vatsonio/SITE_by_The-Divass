@@ -2,7 +2,10 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
+var bcrypt = require('bcrypt');
 var Requests = require('../models/requestSchema');
+const saltRounds = 10;
+
 
 // Функція для обробки помилок
 function handleError(res, err, message) {
@@ -72,27 +75,30 @@ router.post('/register', function(req, res) {
 				c=1;
 			}
 
-			var newPerson = new User({
-				unique_id:c,
-				email:personInfo.email,
-				username: personInfo.username,
-				password: personInfo.password,
-				passwordConf: personInfo.passwordConf,
-				role: personInfo.role
-			});
+			bcrypt.hash(personInfo.password, saltRounds, function(err, hash) {
+				var newPerson = new User({
+					unique_id:c,
+					email:personInfo.email,
+					username: personInfo.username,
+					password: hash,
+					passwordConf: hash,
+					role: personInfo.role
+				});
 
-			newPerson.save(function(err){
-				if(err){
-					return handleError(res, err, "Помилка при реєстрації.");
-				}
-				res.redirect('/login');
+				newPerson.save(function(err){
+					if(err){
+						return handleError(res, err, "Помилка при реєстрації.");
+					}
+					res.redirect('/login');
+				});
 			});
 		}).sort({_id: -1}).limit(1);
 	});
 });
 
-// Логін
-router.get('/login', function (req, res) {
+
+// Завантаження Сторінки з логіном
+router.get('/login', function (req, res, next) {
 	User.findOne({unique_id:req.session.userId},function(err,user){
 		if(err){
 			console.error(err);
@@ -107,6 +113,7 @@ router.get('/login', function (req, res) {
 	});
 });
 
+// Логін
 router.post('/login', function (req, res) {
 	User.findOne({email:req.body.email},function(err,data){
 		if(err){
@@ -115,13 +122,17 @@ router.post('/login', function (req, res) {
 		if(!data){
 			return res.send({"Success":"This Email Is not regestered!"});
 		}
-		if(data.password != req.body.password){
-			return res.send({"Success":"Wrong password!"});
-		}
-		req.session.userId = data.unique_id;
-		res.redirect('/profile');
+		bcrypt.compare(req.body.password, data.password, function(err, result) {
+			if(result == true){
+				req.session.userId = data.unique_id;
+				res.redirect('/profile');
+			}else{
+				return res.send({"Success":"Wrong password!"});
+			}
+		});
 	});
 });
+
 
 
 // Створення нової заявки
@@ -292,31 +303,29 @@ router.get('/forgetpass', function (req, res, next) {
 });
 
 router.post('/forgetpass', function (req, res, next) {
-	//console.log('req.body');
-	//console.log(req.body);
 	User.findOne({email:req.body.email},function(err,data){
 		console.log(data);
 		if(!data){
 			res.send({"Success":"This Email Is not regestered!"});
 		}else{
-			// res.send({"Success":"Success!"});
 			if (req.body.password==req.body.passwordConf) {
-			data.password=req.body.password;
-			data.passwordConf=req.body.passwordConf;
+				bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
+					data.password=hash;
+					data.passwordConf=hash;
 
-			data.save(function(err, Person){
-				if(err)
-					console.log(err);
-				else
-					console.log('Success');
-					res.send({"Success":"Password changed!"});
-			});
-		}else{
-			res.send({"Success":"Password does not matched! Both Password should be same."});
-		}
+					data.save(function(err, Person){
+						if(err)
+							console.log(err);
+						else
+							console.log('Success');
+							res.redirect('/login');
+					});
+				});
+			}else{
+				res.send({"Success":"Password does not matched! Both Password should be same."});
+			}
 		}
 	});
-	
 });
 
 module.exports = router;
