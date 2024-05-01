@@ -81,8 +81,6 @@ npm install
 
 **## Database Connection**
 Modify line 12 within `./server.js`:
-* Replace ***`<DB_USERNAME>`***  with your MongoDB Atlas username.
-* Replace ***`<DB_PASSWORD>`*** with your MongoDB Atlas password.
 
 **## Application Execution**
 ```
