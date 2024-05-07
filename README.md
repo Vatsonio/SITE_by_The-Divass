@@ -21,9 +21,6 @@
 
 This website is a great resource that gives volunteers the opportunity to help people. It is built using various technologies that ensure its flexibility, reliability and intuitive interface.
 
-### Deployment
-This Project is **[Live]()** on: ****
-
 ### Docker
 Repo on ***[docker](https://hub.docker.com/repository/docker/w1nsou/divass-help/general)***
 
